@@ -60,7 +60,7 @@ a {
     /* border-radius rounds each edge of the element's original width/height into a circle */
 }
 
-.profile, .about, .about_me-table {
+.profile, .about, .about_me-table, .about_me-text {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
