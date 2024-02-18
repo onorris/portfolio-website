@@ -2,13 +2,14 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: last 2 version
+* Browsers: last 4 version
 */
+
 
 /* declarations of NATIVE color variables, CSS variables defined by adding -- in front of variable name*/
 
 a {
-    color:#357b70;
+    color:#633C9A;
 }
 /* --primary-color can't be passed onto a property (like in Sass). Need to used the var() function as a value, like above */
 
@@ -65,7 +66,7 @@ a {
     /* border-radius rounds each edge of the element's original width/height into a circle */
 }
 
-.profile, .about, .about_me-table {
+.profile, .about, .about_me-table, .about_me-text {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
@@ -131,10 +132,6 @@ td {
     font-weight: 100;
 }
 
-a {
-    color: #357b70;
-}
-
 a:visited {
     /* visited link */
     color: #1a3a35;
@@ -147,7 +144,7 @@ a:hover, a:focus {
 
 a:active {
     /* selected link */
-    color: #489c79;
+    color: #633C9A;
 }
 
 button {
@@ -166,6 +163,7 @@ button {
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format and transition info*/
     border-bottom: 2px solid black; 
     -webkit-transition: opacity 0.2s; 
+    -o-transition: opacity 0.2s; 
     transition: opacity 0.2s;
     /* always add the transition property to the default state of an element and needs to be on .button rule (not .button:hover)
     List transition-property (opacity) and then transition duration (0.2s)*/
@@ -187,6 +185,7 @@ button {
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format and transition info*/
     border-bottom: 2px solid black; 
     -webkit-transition: opacity 0.2s; 
+    -o-transition: opacity 0.2s; 
     transition: opacity 0.2s;
     /* always add the transition property to the default state of an element and needs to be on .button rule (not .button:hover)
     List transition-property (opacity) and then transition duration (0.2s)*/
@@ -225,7 +224,7 @@ New property but can define an alternative layout in CSS FIRST, then overwrite w
         margin: 0;
     }
     .grid_item {
-        background-color:#1a3a35;
+        background-color:#D5E7E1;
         width: auto;
         min-height: auto;
         margin: 0;
@@ -270,86 +269,4 @@ Each @media query needs to house ONLY the properties unique to them. Code works 
         grid-template-columns: 1fr;
         /*this code changes layout from a 2 column grid to a 1 column grid through grid-template-columns property */ 
     }
-}
-
-/* fill is a specific CSS property that ONLY applies to SVG images. Can use from --> to, or percentages. 
-This code defines the rule */
-@-webkit-keyframes color-change {
-    0% {
-        fill: #edc655;
-    }
-    50% {
-        fill:#fcffad;
-    }
-    100% {
-        fill: #f76414;
-    }
-}
-@keyframes color-change {
-    0% {
-        fill: #edc655;
-    }
-    50% {
-        fill:#fcffad;
-    }
-    100% {
-        fill: #f76414;
-    }
-}
-/*Then this code applies the animation to the sun in the graphic */
-.sun {
-    -webkit-animation: 4s color-change infinite alternate linear;
-            animation: 4s color-change infinite alternate linear;
-}
-/* animation: combines all factors together in order of duration--> name --> iteration-count --> direction-->timing-function */ 
-
-/* Rule for moving larger cloud from 0px to 200px horziontally only. First # = horizontal value, second # = vertical value. */
-@-webkit-keyframes cloud-move {
-    from {
-        -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px)
-    }
-    to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px)
-    }
-}
-@keyframes cloud-move {
-    from {
-        -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px)
-    }
-    to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px)
-    }
-}
-.cloud-front {
-    -webkit-animation: 30s cloud-move infinite alternate linear;
-            animation: 30s cloud-move infinite alternate linear;
-}
-/* rule for moving smaller cloud the opposite direction */
-@-webkit-keyframes cloud-move-reverse {
-    from {
-        -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px)
-    }
-    to {
-        -webkit-transform: translate(100px, 48px);
-                transform: translate(100px, 48px)
-    }
-}
-@keyframes cloud-move-reverse {
-    from {
-        -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px)
-    }
-    to {
-        -webkit-transform: translate(100px, 48px);
-                transform: translate(100px, 48px)
-    }
-}
-.cloud-back {
-    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-            animation: 34s cloud-move-reverse infinite alternate linear
 }
