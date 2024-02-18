@@ -1,6 +1,6 @@
 
 :root {
-    --primary-color: #357b70;
+    --primary-color: #D5E7E1;
     --primary-color-darker: #1a3a35;
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
@@ -187,7 +187,7 @@ New property but can define an alternative layout in CSS FIRST, then overwrite w
         margin: 0;
     }
     .grid_item {
-        background-color:var(--primary-color-darker);
+        background-color:var(--primary-color);
         width: auto;
         min-height: auto;
         margin: 0;
