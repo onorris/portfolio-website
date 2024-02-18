@@ -5,15 +5,12 @@
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
     --black: rgb(1, 1, 13);
-    --sun-color-one: #edc655;
-    --sun-color-two: #fcffad;
-    --sun-color-three:#f76414;
-    --active-link-color: #489c79;
+    --active-link-color: #633C9A;
 }
 /* declarations of NATIVE color variables, CSS variables defined by adding -- in front of variable name*/
 
 a {
-    color:var(--primary-color);
+    color:var(--active-link-color);
 }
 /* --primary-color can't be passed onto a property (like in Sass). Need to used the var() function as a value, like above */
 
@@ -122,10 +119,6 @@ thead {
 td {
     font-size: 15px;
     font-weight: 100;
-}
-
-a {
-    color: var(--primary-color);
 }
 
 a:visited {
